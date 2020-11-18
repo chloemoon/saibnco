@@ -1,0 +1,613 @@
+@charset "utf-8";
+@import "./reset.css";
+@import "../fragment/_header.scss";
+@import "../fragment/_footer.scss";
+
+// 섹션영역
+
+// 메인배너 - 동영상
+.iframebox{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+   
+    >iframe{
+        position: absolute;
+        width: 100%;   
+        height: 100%;
+    }
+}
+
+// SHOP 바로가기
+
+.shop{
+    width:100%;
+    height:800px;
+    background: url(../images/section2_bg.png);
+
+    >.shop_inner{
+        position:relative;
+        width:100%;
+        max-width:1000px;
+        margin:0 auto;
+        >.shop_tit{
+            margin-bottom:90px;
+            margin-top:92px;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 40px;
+            text-indent: 2px;
+            @media screen and (max-width:1024px){
+               display:block;
+               text-align: center;
+            }
+        }
+        >.shop_product{
+            display:flex;
+            justify-content: space-between;
+            >div{
+                width:29.88vw;
+                max-width:500px;
+                height:500px;
+                >img{
+                    width:29.88vw;
+                    height:29.88vw;
+                    max-width:300px;
+                    max-height:300px;
+                    margin-bottom:20px;
+                }
+                >.product_ad{
+                    color:#797979;
+                    font-size: 14px;
+                }
+                >.product_tit{
+                    color:#282C49;
+                    font-size: 16px;
+                }
+                >.product_price{
+                    color:#BE4B78;
+                    margin-top:7px;
+                    font-size: 16px;
+                    
+                    >span{
+                        color:#282C49;
+                    }
+                }
+            }
+        }
+        >.shop_link{
+            position:absolute;
+            left:50%;
+            width:160px;
+            height:40px;
+            margin-left:-80px;
+            text-align: center;
+            background-color: #e7acbd;
+            >a{
+                color:#fff;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 40px;
+
+            }
+        }
+    }
+}
+
+// promise 섹션 - 스와이퍼 슬라이드
+.promise{
+    width:100%;
+    height:750px;
+    @media screen and (max-width:1024px){
+        height:1300px;
+        overflow:hidden;
+     }
+    >.promise_inner{
+        width:100%;
+        max-width:1000px;
+        margin:0 auto;
+
+        >.promise_tit{
+
+            margin-bottom:90px;
+            margin-top:92px;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 40px;
+            text-indent: 2px;
+            @media screen and (max-width:1024px){
+                display:block;
+                text-align: center;
+             }
+        }
+        >.swiper-container{
+            overflow: hidden;
+            width:100%;
+            max-width:1000px;
+            height:580px;
+            @media screen and (max-width:1024px){
+                width:500px;
+                height:1400px;
+             }
+             .swiper-pagination{
+                @media screen and (max-width:1024px){
+                    display:none;
+                 }
+             }
+             .swiper-slide{
+                 display:flex;
+                 @media screen and (max-width:1024px){
+                   display:flex;
+                   flex-flow:column nowrap;
+                 }
+                    >.slide-left{
+                     width:500px;
+                     height:500px;
+                     >img{
+                         display:block;
+                         width:100%;
+                         min-width:500px;
+                         min-height:500px;
+                        }
+                    }
+                    >.slide-right{
+                        width:500px;
+                        height:500px;
+                        background-color: #fce8ec;
+                        @media screen and (max-width:1024px){
+                            background-color: #fff;
+                          }
+                        >h2{
+                            color:#d0d0d0;
+                            margin:20px;
+                            font-family: 'Abril Fatface';
+                            font-size: 45px;
+                        }
+                        >h2+p{
+                            color:#e7acbd;
+                            font-family: 'Abril Fatface';
+                            font-size: 50px;
+                            margin:120px 0 0 20px;
+                            
+                        }
+                        >p:nth-of-type(2){
+                            color:#3b3f56;
+                            margin:30px 0 0 20px;
+                            font-size: 18px;
+                    }
+                    
+                 }
+             }
+        }
+    }
+}
+
+
+// review 섹션
+.review{
+    position:relative;
+    width:100%;
+    height:500px;
+
+    @media screen and (max-width:1024px){
+        display:none;
+
+    }
+    >.review_slider{
+        overflow:hidden;
+        position:relative;
+        width:100%;
+        max-width:1000px;
+        height:400px;
+        margin:0 auto;
+        >.review_slider_inner{
+            position:absolute;
+            top:0;
+            left:0;
+            display:flex;
+            width:200%;
+            .frst-review-box{
+                display:flex;
+                >div{
+                    margin-right:30px;
+
+                }
+                &:last-child{
+                    margin-right:none;
+                }
+                a{  
+                    display:block;
+                    position:relative;
+                    width:253px;
+                    height:340px;
+                    padding:30px;
+                    background:#f8e4e8;
+
+                    
+                    >.review-content{
+                        margin-top:15px;
+                        color:#767676;
+                        font-size: 14px;
+                        >p{
+                            position:absolute;
+                            bottom:30px;
+                            right:30px;
+                            color:#e0a6b8;
+                            font-size: 14px;
+                            text-align: right;
+                        }
+                    }
+                }
+                    img{
+                        float:left;
+                    }
+                    display:flex;
+                    .user{
+                        display:block;
+                        width:32px;
+                        height:32px;
+                    }
+                    .rating{
+                        width:140px;
+                        height:21px;
+                        margin:7px;
+                       
+                    }
+                
+            }
+            .snd-review-box{
+                display:flex;
+                margin-left:-30px;
+                >div{
+                    margin-right:30px;
+                 
+                }
+                a{  
+                    display:block;
+                    position:relative;
+                    width:253px;
+                    height:340px;
+                    padding:30px;
+                    background:#f8e4e8;
+                    >.review-content{
+                        margin-top:15px;
+                        color:#767676;
+                        font-size: 14px;
+                        >p{
+                            position:absolute;
+                            bottom:30px;
+                            right:30px;
+                            color:#e0a6b8;
+                            font-size: 14px;
+                            text-align: right;
+                        }
+                    }
+                }
+                img{
+                    float:left;
+                }
+                display:flex;
+                .user{
+                    display:block;
+                    width:32px;
+                    height:32px;
+                }
+                .rating{
+                    width:140px;
+                    height:21px;
+                    margin:7px;
+                }
+            
+            }
+        }
+        
+    }
+    >.review-indicator{
+        @media screen and (max-width:1024px){
+            display:none;
+        }
+        display:flex;
+        justify-content: space-evenly;
+        position:absolute;
+        bottom:40px;
+        left:50%;
+        width:60px;
+        margin-left:-30px;
+        >a{
+            display:block;
+            width:12.5px;
+            height:12.5px;
+            text-indent: -9999px;
+            border-radius: 50%;
+            background-color: #E6E6E6;
+            &:last-child{
+                margin-right:none;
+            }
+        }
+        >a.on{
+            background-color: #F3BFC8;
+        }
+
+    }
+}
+
+
+// 모바일 리뷰
+.mobile-review{
+    .box{
+        height:500px;
+        background-color:#f8e4e8; 
+        >a{
+            display:block;
+                img{
+                    float:left;
+                }
+                .user{
+                    display:block;
+                    width:50px;
+                    height:50px;
+                    margin:50px;
+                }
+                .rating{
+                    padding-top:65px;
+                }
+                .review-content{
+                    padding:50px;
+                    font-size: 16px;
+                    >p{
+                        margin-top:50px;
+                        color:#F3BFC8;
+                        text-align: right;
+                    }
+                }
+ 
+            
+        }
+    }
+}
+// campagin 섹션
+
+.campaign{
+    width:100%;
+    height:900px;
+    background: #fce8ec;
+    @media screen and (max-width:1024px){
+       height:1000px;
+     }
+    >.campaign_inner{
+        width:100%;
+        max-width: 1000px;
+        margin:0 auto;
+        // border: 1px solid #000;
+        >.campaign_tit{
+            padding-top:90px;
+            padding-bottom:90px;
+            >a{
+                display:block;
+                font-weight: 400;
+                font-size: 40px;
+                text-indent: 2px;
+            }
+            @media screen and (max-width:1024px){
+                text-align: center;
+              }
+        }
+        >.campaign-box{
+            overflow:hidden;
+            display:flex;
+            width:100%;
+            @media screen and (max-width:1024px){
+                flex-flow:column nowrap;
+                width:100vw;
+                max-width:480px;
+                margin:0 auto;
+             }
+            >.campaign-left{
+                >img{
+                    display:block;
+                    width:650px;
+                   
+                }
+            }
+            >.campaign-right{
+                >h3{
+                    color:#e7acbd;
+                    font-family: 'Abril Fatface';
+                    font-size:40px;
+                    margin: 100px 0 0 24px;
+                    @media screen and (max-width:1024px){
+                        margin: 50px 0 0 24px;
+                      }
+                }
+                >p{
+                    color:#3b3f56;
+                    font-size: 18px;
+                    margin: 140px 0 0 24px;
+                    @media screen and (max-width:1024px){
+                        margin: 20px 0 0 24px;
+                      }
+                }
+            }
+        }
+        
+    }
+   
+
+}
+
+
+// ABOUT SAIB 섹션
+
+.about-saib{
+    width:100%;
+    height:200px;
+    @media screen and (max-width:1024px){
+        height:600px;
+      }
+    >.saib-inner{
+        display:flex;
+        justify-content: space-between;
+
+        width:100%;
+        max-width:1000px;
+        margin: 0 auto;
+        @media screen and (max-width:1024px){
+            flex-flow:column nowrap;
+          }
+        >.link{
+            width:33.333%;
+            @media screen and (max-width:1024px){
+                width:100%;
+                height:200px;
+                border-bottom: 1px solid #e7acbd;
+              }
+            >a{
+                display:block;
+                display:flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                position:relative;
+                width:100%;
+                height:200px;
+                @media screen and (max-width:1024px){
+                    display:flex;
+                    flex-flow: column nowrap;
+                    justify-content: start;
+                    align-items: flex-start;
+                    // padding:50px 0 0 50px;
+                }
+                &:after{
+                    display:block;
+                    position:absolute;
+                    top:50%;
+                    left:0;
+                    content:'';
+                    width:100%;
+                    height:150px;
+                    margin-top:-75px;
+                    border-right: 1px solid #ebb2c0;
+                    @media screen and (max-width:1024px){
+                        display:none;
+                    }
+                }
+                >.title{
+                    font-weight: 400;
+                    font-size: 35px;
+                    @media screen and (max-width:1024px){
+                        margin:50px 0 0 50px;
+                     }
+                }
+
+                >.pink{
+                    width:51%;
+                    text-align: left;
+                    color:#e7acbd;
+                    font-size: 18px;
+                    @media screen and (max-width:1024px){
+                        margin:0 0 0 50px;
+                    }
+
+                }
+                
+            }
+        }
+        >.press{
+            >a{
+                align-items: center;
+                >.title{
+                    text-indent: -25px;
+                    @media screen and (max-width:1024px){
+                       text-indent: 0;
+                       margin:50px 0 0 50px;
+                    }
+                }
+                >.pink{
+                    @media screen and (max-width:1024px){
+                        margin:0 0 0 50px;
+                    }
+                }
+                @media screen and (max-width:1024px){
+                    display:flex;
+                    flex-flow: column nowrap;
+                    justify-content: start;
+                    align-items: flex-start;
+                    // padding:50px 0 0 50px;
+                }
+            }
+        }
+        >.stockist{
+            >a{
+               align-items: flex-end;
+               &:after{
+                   display:block;
+                   content:'';
+                   border-right:none;
+               }
+               >.title{
+                @media screen and (max-width:1024px){
+                    margin:50px 0 0 50px;
+                }
+               }
+               >.pink{
+                width:59%;
+                text-align: left;
+                    @media screen and (max-width:1024px){
+                        margin:0 0 0 50px;
+                    }
+                }
+                @media screen and (max-width:1024px){
+                    display:flex;
+                    flex-flow: column nowrap;
+                    justify-content: start;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}
+// awards 이미지
+.awards-img{
+    height:320px;
+    background: #fce8ec;
+    @media screen and (max-width:1024px){
+        height:250px;
+    
+      }
+    >.awards-img-inner{
+        width:100%;
+        max-width:1000px;
+        margin:0 auto;
+        >img{
+            display:block;
+            width:100%;
+
+        }
+    }
+}
+
+// 인스타그램 섹션
+
+.saib-insta{
+    height:800px;
+    margin-bottom:90px;
+    @media screen and (max-width:1024px){
+        height:80vw;
+      }
+    >.saib-insta-inner{
+        width:100%;
+        max-width:1000px;
+        margin:0 auto;
+        >h3{
+            width:100%;
+            margin: 90px 0 ;
+            font-weight: 800;
+            font-size: 28px;
+            text-align: center;
+        }
+        >iframe{
+            width:900px;
+            height:100%;
+        }
+    }
+}
+

@@ -1,0 +1,139 @@
+// footer
+footer{
+    height:200px;
+    background: #fce8ec;
+    @media screen and (max-width:1024px){
+        height:400px;
+      }
+}
+.footer_linkmnu{
+    position:relative;
+    width:100%;
+    max-width:1000px;
+    margin:0 auto;
+    padding-top:40px;
+    line-height: 20px;
+    @media screen and (max-width:1024px){
+        max-width:500px;
+        padding-top:100px;
+      }
+
+    .saib-info-name{
+        color:#c5768c;
+        font-size: 12px;
+
+    }
+    .saib-info{
+        color:#c5768c;
+        >a{
+            color:#cca6b0;
+        }
+    }
+    .saib-info-text{
+        color:#cca6b0;
+        a{
+            color:#cca6b0;
+        }
+    }
+    .guide{
+        padding-top:20px;
+    }
+    >.sns-icon{
+        display:flex;
+        justify-content: space-between;
+        position:absolute;
+        width: 130px;
+        right:0;
+        top:40px;
+        @media screen and (max-width:1024px){
+            right:50%;
+            margin-right:-65px;
+          }
+        .sns-icon-global{
+            display:block;
+            width:40px;
+            height:40px;
+            text-indent: -9999px;
+            background: url(../images/icon-global.png) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        .sns-icon-insta{
+            display:block;
+            width:40px;
+            height:40px;
+            text-indent: -9999px;
+            background: url(../images/icon-insta.png) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        .fb{
+            display:block;
+            width:40px;
+            height:40px;
+            text-indent: -9999px;
+            background: url(../images/icon-facebook.png) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+}
+
+// 고정버튼
+.bottom-btn{
+    background: #fce8ec;
+    >.btn-up{
+        display:none;
+        width:50px;
+        height:50px;
+        >a{
+            display:block;
+            width:100%;
+            height:100%;
+            cursor:default;
+            img{
+                display:block;
+                position:fixed;
+                right:30px;
+                bottom: 110px;
+                width:50px;
+                height:50px;
+                z-index: 1500;
+            }
+        }
+        
+    }
+    >.bottom-chat{
+            position:fixed;
+            right:25px;
+            bottom:35px;
+            width:62px;
+            height:62px;
+            border-radius: 50%;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 6px 0px !important;
+            background: linear-gradient(rgb(252, 232, 236) 0%, rgb(252, 232, 236) 50%, rgb(252, 233, 232) 100%) !important;
+            z-index: 1010;
+            .btn-chat{
+            position:absolute;
+            width:62px;
+            height:62px;
+            border-radius: 50%;
+
+            &:before{
+                display:block;
+                position:absolute;
+                top:50%;
+                left:50%;
+                content:'';
+                width:34px;
+                height:34px;
+                margin-top:-17px;
+                margin-left:-17px;
+                background-image: url(../images/sprite-chat.png);
+                background-size: 136px;
+                background-position: 0 -34px;
+            }
+        }
+    }
+    
+}
